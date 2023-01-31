@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perosnal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7f228906b4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+<!--            <img src="images/logo.png" class="logo">-->
+            <ul>
+                <li><a href="#header">Home</a> </li>
+                <li><a href="#about">About</a> </li>
+                <li><a href="#services">Service</a> </li>
+                <li><a href="#projects">Portfolio</a> </li>
+                <li><a href="#contact">Contact</a> </li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Cyber Security Engineer</p>
+            <h1>Hi, I'm <span>Pratik Yelwande</span> <br>From India</h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/dp.jpg" alt="userpic">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto consectetur corporis dicta dignissimos eos error, est et fugiat illum ipsam nam, numquam obcaecati quidem reprehenderit sed suscipit, vero voluptatem.</p>
+            <div class="tab-title">
+                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>CEH</span><br>V12</li>
+                        <li><span>CCNA</span><br>301-382</li>
+                        <li><span>Web Devlopement</span><br>Front End</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Portfolio</span><br>Using HTML CSS JS</li>
+                        <li><span>Login System</span><br>Python Tkinter</li>
+                        <li><span>Student Management System</span><br>Python</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-2022</span><br>B.Sc Computer Science</li>
+                        <li><span>2022-2024</span><br>MCA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Services-->
+<div id="services">
+     <div class="container">
+         <h1 class="sub-title">My Projects</h1>
+         <div class="services-list">
+            <div>
+                <i class="fa-regular fa-clone"></i>
+                <h2>RFID Cloning</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aperiam assumenda eligendi enim esse, ex, inventore labore libero nam neque nesciunt quasi reprehenderit similique veniam vero voluptatem! Consectetur, voluptatem.</p>
+                <a href="#">Learn More</a>
+            </div>
+             <div>
+                 <i class="fa-solid fa-terminal"></i>
+                 <h2>Shell Scripting</h2>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aperiam assumenda eligendi enim esse, ex, inventore labore libero nam neque nesciunt quasi reprehenderit similique veniam vero voluptatem! Consectetur, voluptatem.</p>
+                 <a href="#">Learn More</a>
+             </div>
+             <div>
+                 <i class="fa-solid fa-wifi"></i>
+                 <h2>Wifi Cracking</h2>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias aperiam assumenda eligendi enim esse, ex, inventore labore libero nam neque nesciunt quasi reprehenderit similique veniam vero voluptatem! Consectetur, voluptatem.</p>
+                 <a href="#">Learn More</a>
+             </div>
+         </div>
+     </div>
+</div>
+                                    <!--Contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>Yelwandepratik11@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 9850112801 </p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/pratik_1105"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/pratik-yelwande/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/pratikyelwande"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://app.hackthebox.com/profile/overview"><i class="fa-brands fa-hackerrank"></i></a>
+                </div>
+               <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form action="Backend/service.php" method="post">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea type="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <i class="fa-solid fa-badge-check"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links")
+    var tabcontents =document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
